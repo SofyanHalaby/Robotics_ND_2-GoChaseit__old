@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/robond/Workspace/catkin_ws/devel/setup.sh
+    local-name: /home/robond/ws/repos/Robotics_ND_2-GoChaseit/Project2/catkin_ws/devel/setup.sh

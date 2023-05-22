@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/robond/Workspace/catkin_ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/robond/ws/repos/Robotics_ND_2-GoChaseit/Project2/catkin_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_78c8f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_78c8f.dir/build.make CMakeFiles/cmTC_78c8f.dir/build
-make[1]: Entering directory '/home/robond/Workspace/catkin_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_78c8f.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_78c8f.dir/CheckSymbolExists.c.o   -c /home/robond/Workspace/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_78c8f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78c8f.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_78c8f.dir/CheckSymbolExists.c.o  -o cmTC_78c8f -rdynamic 
-CMakeFiles/cmTC_78c8f.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_74f59/fast"
+/usr/bin/make -f CMakeFiles/cmTC_74f59.dir/build.make CMakeFiles/cmTC_74f59.dir/build
+make[1]: Entering directory '/home/robond/ws/repos/Robotics_ND_2-GoChaseit/Project2/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_74f59.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_74f59.dir/CheckSymbolExists.c.o   -c /home/robond/ws/repos/Robotics_ND_2-GoChaseit/Project2/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_74f59
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74f59.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_74f59.dir/CheckSymbolExists.c.o  -o cmTC_74f59 -rdynamic 
+CMakeFiles/cmTC_74f59.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_78c8f.dir/build.make:97: recipe for target 'cmTC_78c8f' failed
-make[1]: *** [cmTC_78c8f] Error 1
-make[1]: Leaving directory '/home/robond/Workspace/catkin_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_78c8f/fast' failed
-make: *** [cmTC_78c8f/fast] Error 2
+CMakeFiles/cmTC_74f59.dir/build.make:97: recipe for target 'cmTC_74f59' failed
+make[1]: *** [cmTC_74f59] Error 1
+make[1]: Leaving directory '/home/robond/ws/repos/Robotics_ND_2-GoChaseit/Project2/catkin_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_74f59/fast' failed
+make: *** [cmTC_74f59/fast] Error 2
 
-File /home/robond/Workspace/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/robond/ws/repos/Robotics_ND_2-GoChaseit/Project2/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/robond/Workspace/catkin_ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/robond/ws/repos/Robotics_ND_2-GoChaseit/Project2/catkin_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1c914/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1c914.dir/build.make CMakeFiles/cmTC_1c914.dir/build
-make[1]: Entering directory '/home/robond/Workspace/catkin_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1c914.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1c914.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_1c914
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c914.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_1c914.dir/CheckFunctionExists.c.o  -o cmTC_1c914 -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_aedbf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aedbf.dir/build.make CMakeFiles/cmTC_aedbf.dir/build
+make[1]: Entering directory '/home/robond/ws/repos/Robotics_ND_2-GoChaseit/Project2/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aedbf.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_aedbf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_aedbf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aedbf.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_aedbf.dir/CheckFunctionExists.c.o  -o cmTC_aedbf -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_1c914.dir/build.make:97: recipe for target 'cmTC_1c914' failed
-make[1]: *** [cmTC_1c914] Error 1
-make[1]: Leaving directory '/home/robond/Workspace/catkin_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_1c914/fast' failed
-make: *** [cmTC_1c914/fast] Error 2
+CMakeFiles/cmTC_aedbf.dir/build.make:97: recipe for target 'cmTC_aedbf' failed
+make[1]: *** [cmTC_aedbf] Error 1
+make[1]: Leaving directory '/home/robond/ws/repos/Robotics_ND_2-GoChaseit/Project2/catkin_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_aedbf/fast' failed
+make: *** [cmTC_aedbf/fast] Error 2
 
 
