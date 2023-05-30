@@ -2,6 +2,7 @@
 #include "ball_chaser/DriveToTarget.h"
 #include <sensor_msgs/Image.h>
 #include "ros/console.h" //for logs
+#include "math.h"
 
 
 // Define a global client that can request services
@@ -28,25 +29,43 @@ void process_image_callback(const sensor_msgs::Image img)
     // Then, identify if this pixel falls in the left, mid, or right side of the image
     // Depending on the white ball position, call the drive_bot function and pass velocities to it
     // Request a stop when there's no white ball seen by the camera
+    
+    bool detected = false;
+    int nchanels = img.step / img.width;
+    int img_size = img.height*img.step;
+    int idx = -1;
+    int total_white = 0;
+    for(int i = 0; i < img_size; i+=nchanels)
+    {
+        if(img.data[i] == white_pixel && img.data[i+1] == white_pixel && img.data[i+2] == white_pixel)
+        {
+            if(detected)
+            {
+                ++total_white;
+            }
+            else
+            {
+                ROS_INFO("INFO: i can see ball!\n");
+                idx = i;
+                detected = true;
+                total_white  = 1;
+
+            }
+        }
+    }
+
     float lin_x = 0.0;
     float ang_z = 0.0;
-    bool found = false;
-    int nchanels = img.step / img.width;
-    /*for(int i = 0; i < img.height * img.step; i += nchanels){
-        f
-    }
-    for(int row = 0; row < img.height; ++row){
-        for()
-    }*/
-    for(int i = 0; i < img.height*img.step; i+=nchanels){
-        if(img.data[i] == white_pixel && img.data[i+1] == white_pixel && img.data[i+2] == white_pixel){
-            ROS_INFO("INFO: i can see ball!\n");
-            lin_x = 0.2;
-            switch((i%img.width)/(img.width/3)){
-            case 0: ang_z = +0.5; break;
-            case 2: ang_z = -0.5; break;
-            }
-            break;
+    int max_white = img.height * img.width * 0.85;
+    if(detected && total_white < max_white)
+    {
+        ROS_INFO("%f\n", img.height * img.width * 0.1f / total_white);
+        float factor = std::min(0.5f, img.height * img.width * 0.1f / total_white);
+        switch((idx%img.width)/(img.width/3))
+        {
+        case 0: ang_z = +factor; break;
+        case 1: lin_x = +factor; break;
+        case 2: ang_z = -factor; break;
         }
     }
 
